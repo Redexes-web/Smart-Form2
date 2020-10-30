@@ -1,0 +1,64 @@
+#home img{
+    display: none;
+}
+.introduction {
+    font-family: $fontPrimary;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+#home{
+    .btn{
+        width: fit-content;
+        margin: 2.5rem;
+    }
+    .buttons{
+        @include flexbox;
+        @include flex-flow(column nowrap);
+        @include align-items(center);
+    }
+    h1{
+        span{
+            font-family: "Ubuntu Bold Italic";
+        }
+    }
+}
+
+@media #{$largeUp}
+{
+    /* HEADER =============================================================================== */
+    #home{
+        #logo {
+            display: block;
+            margin-top: -7rem;
+            transform: rotate(-5deg);
+            width: 25rem;
+            height: 25rem;
+        }
+        .buttons{
+            @include flex-direction(row);
+            @include justify-content(space-evenly);
+        }
+    }
+}
+@media #{$largeBetween}
+{
+
+    #home{
+        h1 {
+            width: 65%;
+        }
+        #logo {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+}
+
+@media #{$xLargeUp}{
+
+    #home #logo{
+        margin-top: 0;
+    }
+}

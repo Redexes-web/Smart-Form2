@@ -1,0 +1,16 @@
+@use 'sass:list';
+$medium: 768px!default;
+$large: 1530px!default;
+$mediumDown: "only screen and (max-width: #{$medium})";
+$largeUp: "only screen and (min-width:#{$large})";
+$largeDown: "only screen and (max-width:#{$large})";
+
+$medium: 768px, 1024px;
+$large: 1025px, 1500px;
+$xLarge: 2181px;
+
+$mediumUp: "only screen and (min-width: #{list.nth($medium, 1)})";
+$mediumBetween: "only screen and (min-width: #{list.nth($medium, 1)}) and (max-width: #{list.nth($medium, 2)})";
+$largeUp: "only screen and (min-width: #{list.nth($large,1)})";
+$largeBetween: "only screen and (min-width: #{list.nth($large, 1)}) and (max-width: #{list.nth($large, 2)})";
+$xLargeUp: "only screen and (min-width: #{list.nth($xLarge,1)})";

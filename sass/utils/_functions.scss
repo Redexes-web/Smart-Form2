@@ -1,0 +1,29 @@
+$base-font-size: 16px!default;
+$dark-color: #000!default;
+$light_color: #fff!default;
+
+@function strip-unit($num){
+    @if type-of($num) == 'number' and not unitless($num) {
+        @return $num / ($num * 0 + 1);
+    }
+
+    @return $num;
+}
+
+@function rem($size, $base: $base-font-size){
+    @return 1rem * $size / strip-unit($base);
+}
+
+@function em($size, $base: $base-font-size){
+    @return 1em * $size / strip-unit($base);
+}
+
+@function bgColorByLightness($bgColor)
+{
+    @if(lightness($bgColor) >50%){
+       @return  $dark-color;
+    }
+    @else{
+       @return $light_color;
+    }
+}

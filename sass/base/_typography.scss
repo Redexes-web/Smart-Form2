@@ -1,0 +1,43 @@
+@include font-face("Gentium Plus Italic", "../fonts/GentiumPlus/GentiumPlus-I","ttf", normal, italic);
+@include font-face("Gentium Plus", "../fonts/GentiumPlus/GentiumPlus-R","ttf", normal, normal);
+
+@include font-face("Ubuntu Bold", "../fonts/Ubuntu/Ubuntu-Bold","ttf", bold, normal);
+@include font-face("Ubuntu Bold Italic", "../fonts/Ubuntu/Ubuntu-BoldItalic","ttf", bold, italic);
+@include font-face("Ubuntu Italic", "../fonts/Ubuntu/Ubuntu-Italic", "ttf",normal, italic);
+@include font-face("Ubuntu Light", "../fonts/Ubuntu/Ubuntu-Light", "ttf",300, normal);
+@include font-face("Ubuntu Light Italic", "../fonts/Ubuntu/Ubuntu-LightItalic","ttf", 300, italic);
+@include font-face("Ubuntu Medium", "../fonts/Ubuntu/Ubuntu-Medium","ttf", 500, normal);
+@include font-face("Ubuntu Medium Italic", "../fonts/Ubuntu/Ubuntu-MediumItalic","ttf", 500, italic);
+@include font-face("Ubuntu", "../fonts/Ubuntu/Ubuntu-Regular", "ttf",400, normal);
+
+html {
+    font-size: 0.625em; /* fallback IE8+ */
+    font-size: calc(1em * 0.625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+body {
+    font-size: 1.4em; /* base font-size is equivalent "14px" */
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Gentium Plus', serif;
+    transition-duration: .3s;
+}
+
+a:hover, a:focus {
+    transition-duration: .3s;
+    color: $colorSecondary;
+}
+
+h1{
+    font-family: $fontPrimary;
+    font-size: 4rem;
+}
+
+h3 {
+
+    font-family: $fontSecondary;
+    font-size: 2.5rem;
+}

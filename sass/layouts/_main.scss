@@ -1,0 +1,34 @@
+main {
+    background-image: url("../images/bg-placeholder.webp"), url("../images/bg.webp");
+    background-size: cover;
+
+}
+
+.container{
+
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgba(229, 229, 229, .8);
+    margin: 8rem auto 0;
+    padding: 3rem;
+}
+
+@media #{$mediumUp}{
+
+    .container {
+        border-radius: 10px;
+        transition: ease-in-out .5s;
+        margin: 15rem auto;
+        width: 72%;
+    }
+    main{
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+
+}
