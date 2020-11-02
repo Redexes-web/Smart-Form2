@@ -1,1 +1,1 @@
-./dart-sass/sass sass/style.scss css/main.css --watch
+./dart-sass/sass css/sass/style.scss css/main.css --watch
