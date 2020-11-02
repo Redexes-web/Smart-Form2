@@ -16,7 +16,7 @@
   $formats: ("eot": "embedded-opentype", "ttf": "truetype", "woff": "woff","svg":"svg");
   @font-face {
     font-family: quote($font-name);
-    src: url($path+"."+$format) format(map.get($formats, $format));
+    src: url($path+"."+$format) format(map-get($formats, $format));
     font-weight: $weight;
     font-style: $style;
   }
