@@ -12,10 +12,10 @@ footer h3 {
     flex-basis: 100%;
 }
 .social {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
     width: 100%;
-    justify-content: space-around;
 }
 .socialGit {
     width: 50px;
@@ -64,38 +64,36 @@ footer h3 {
     }
 }
 .followUs {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 0;
-    /* padding-right: 5rem; */
-}
-
-.followUs img:hover {
-    fill: #461b9d; /*TODO: use svg replacement colored w/ animation duration */
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include flex-grow(0);
 }
 
 .about {
-    flex-grow: 2;
-    /* border-left: 1px solid black;
-    border-right: 1px solid black; */
+    @include flex-grow(2);
 }
 
 .about ul {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    @include flexbox;
+    @include flex-flow(column wrap);
+    @include justify-content(space-around);
+}
+.use ul{
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
 }
 .footerlinks {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include justify-content(center);
 }
 
 @media #{$mediumUp} {
     .footerlinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(space-around);
     }
 }
 @media #{$mediumBetween} {
@@ -103,24 +101,20 @@ footer h3 {
         width: 90%;
     }
     .use ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(space-around);
     }
 }
 
 @media #{$largeUp} {
     footer {
+        @include flexbox;
+        @include flex-flow(row nowrap);
+        @include justify-content(space-around);
+        @include align-content(center);
         background-color: #f3f3f3;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
         margin: 0 auto;
         width: 90vw;
-        justify-content: space-around;
-        font-size: 1rem;
-        align-content: center;
-        text-align: center;
-        height: fit-content;
     }
 }
