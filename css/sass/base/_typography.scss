@@ -26,9 +26,9 @@ a {
     transition-duration: .3s;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, a.active {
     transition-duration: .3s;
-    color: $colorSecondary;
+    color: $colorSecondary!important;
 }
 
 h1{

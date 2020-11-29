@@ -1,4 +1,6 @@
 .btn {
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
     opacity: unset;
     display: inline-block;
@@ -6,24 +8,23 @@
     font-family: $fontPrimary;
     font-style: normal;
     font-weight: 300;
-    border-radius: 10px;
     padding: 15px;
     color: white;
     text-decoration: none;
     margin: 0 1.5rem;
     &:hover {
-        color: white;
+        color: white!important;
     }
     
     &:focus {
-        color: white;
+        color: white!important;
     }
 }
 
 
 .btn-primary {
     background-color: $colorPrimary;*
-    &:active {
+    &:active, &:hover {
         background-color: darken($colorPrimary, 10%);
         
     }
@@ -35,7 +36,7 @@
 
 .btn-secondary {
     background-color: $colorSecondary;
-    &:active {
+    &:active, &:hover {
         background-color: darken($colorSecondary, 10%);
     }
     &:focus{
@@ -47,8 +48,8 @@
     width: auto;
 }
 .btn-round{
+    @extend .rounded-pill;
     width: fit-content;
     margin: 20px auto;
     padding: 10px 25px;
-    border-radius: 25px;
 }
